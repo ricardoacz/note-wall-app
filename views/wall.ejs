@@ -14,8 +14,8 @@
         <ul>
             <% post.forEach(element => { %>
                 <li class="wall-post" data-id="<%=element._id%>">
-                    <span><%=element.message%></span>
-                    <span class="delete-btn"> | DELETE</span>
+                    <p><%=element.message%></p>
+                    <span class="delete-btn"> Delete Post</span>
                 </li>
             <%})%>
         </ul>

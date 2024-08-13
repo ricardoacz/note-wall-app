@@ -1,4 +1,4 @@
-const Post = require('../models/POST')
+const Post = require('../models/Post')
 
 module.exports = {
     getMessages: async (req, res) => {
