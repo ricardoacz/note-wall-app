@@ -4,5 +4,6 @@ const wallController = require('../controllers/wall')
 
 router.get('/', wallController.getMessages)
 router.post('/postMessage', wallController.postMessage)
+router.delete('/deletePost', wallController.deletePost)
 
 module.exports = router

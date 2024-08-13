@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,8 +13,9 @@
         <h2>Posts</h2>
         <ul>
             <% post.forEach(element => { %>
-                <li>
+                <li class="wall-post" data-id="<%=element._id%>">
                     <span><%=element.message%></span>
+                    <span class="delete-btn"> | DELETE</span>
                 </li>
             <%})%>
         </ul>
