@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Wallnote</h1>
-    <span>Logged in as: <%= currentUser.username %></span>
+    <span class="user-log" data-currentuser="<%= currentUser.username %>">Logged in as: <%= currentUser.username %></span>
 
     <a href="/logout">logout</a>
 
@@ -16,8 +16,8 @@
         <h2>Posts</h2>
         <ul>
             <% post.forEach(element => { %>
-                <li class="wall-post" data-id="<%=element._id%>">
-                    <p><%=element.message%> <span>@<%=element.userId.username%></span></p>
+                <li class="wall-post" data-id="<%=element._id%>" data-username="<%=element.userId.username%>">
+                    <p class="message"><%=element.message%> <span>@<%=element.userId.username%></span></p>
                     <% if (currentUser.username === element.userId.username) {%>
                         <span class="delete-btn"> Delete</span>
                     <%}%>
