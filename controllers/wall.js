@@ -12,7 +12,7 @@ module.exports = {
 
     postMessage: async (req, res) => {
         try {
-            await Post.create({message: req.body.message})
+            await Post.create({message: req.body.message, userId:req.user._id})
             console.log('new post created')
             res.redirect('/wall')
         } catch (error) {
