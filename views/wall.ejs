@@ -18,7 +18,9 @@
             <% post.forEach(element => { %>
                 <li class="wall-post" data-id="<%=element._id%>">
                     <p><%=element.message%> <span>@<%=element.userId.username%></span></p>
-                    <span class="delete-btn"> Delete</span>
+                    <% if (currentUser.username === element.userId.username) {%>
+                        <span class="delete-btn"> Delete</span>
+                    <%}%>
                 </li>
             <%})%>
         </ul>
