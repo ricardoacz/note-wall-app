@@ -3,7 +3,8 @@ const Post = require('../models/Post')
 module.exports = {
     getMessages: async (req, res) => {
         try {
-            const message = await Post.find()
+            const message = await Post.find().populate('userId', 'username')
+            console.log(message)
             res.render('wall.ejs', {post: message})
         } catch (error) {
             console.log(error)
