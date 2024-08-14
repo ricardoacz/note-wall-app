@@ -9,7 +9,7 @@ async function deletePost () {
     console.log(postMessage)
 
     try {
-        const response = await fetch ('/deletePost', {
+        const response = await fetch ('/wall/deletePost', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

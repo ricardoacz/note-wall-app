@@ -14,7 +14,7 @@ module.exports = {
         try {
             await Post.create({message: req.body.message})
             console.log('new post created')
-            res.redirect('/')
+            res.redirect('/wall')
         } catch (error) {
             console.log(error)
         }

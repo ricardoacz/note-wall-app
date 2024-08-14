@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Wall Page</h1>
+    <h1>Wallnote</h1>
+    
+
+    <a href="/logout">logout</a>
 
     <div>
         <h2>Posts</h2>
@@ -15,13 +18,13 @@
             <% post.forEach(element => { %>
                 <li class="wall-post" data-id="<%=element._id%>">
                     <p><%=element.message%></p>
-                    <span class="delete-btn"> Delete Post</span>
+                    <span class="delete-btn"> Delete</span>
                 </li>
             <%})%>
         </ul>
     </div>
 
-    <form action="/postMessage" method="post">
+    <form action="/wall/postMessage" method="post">
         <input type="text" placeholder="message" name="message">
         <button type="submit">Create post</button>
     </form>
