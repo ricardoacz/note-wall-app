@@ -31,6 +31,7 @@ This is a simple CRUD application that displays a basic social media page where 
 Open your browser and go to http://localhost:your_port_number.
 Sign up for a new account or log in with an existing account.
 Create, view, update, and delete posts.
+To update a post, click on the text of the post.
 
 ## Things I would like to improve
 - Creating alerts using express flash, to showcase errors like 'email already registered' or 'wrong password' in the client side.
