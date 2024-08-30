@@ -3,7 +3,15 @@ const router = express.Router()
 const homeController = require('../controllers/home')
 const authController = require('../controllers/auth')
 
-router.get('/', homeController.getLogin)
+// Middleware to check if user is authenticated
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/wall');
+    }
+    next();
+}
+
+router.get('/', ensureAuthenticated, homeController.getLogin)
 
 router.get('/login', authController.getLogin)
 router.post('/login', authController.postLogin)
